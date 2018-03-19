@@ -1,5 +1,5 @@
 <?php
-htmlspecialchars($root) = "/";
+$root = "/";
 $actual = substr(strrchr(substr($_SERVER['REQUEST_URI'],0,strlen($_SERVER['REQUEST_URI'])-1), "/"), 1);
 $espacio = "&frasl;";
 
@@ -32,4 +32,3 @@ echo '<div class="cabecera_menu2 transicion_cabeceras" id="cabecera_menu2">';
 echo '</div>';
 
 ?>
-

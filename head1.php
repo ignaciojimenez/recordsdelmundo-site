@@ -1,5 +1,5 @@
 <?php
-htmlspecialchars($root) = "/";
+$root = "/";
 ?>
 <title>Records del mundo</title>
 <link rel="shortcut icon" href="<?php echo htmlspecialchars($root) ?>images/favicons/globe_bw.png" type="image/x-icon">
