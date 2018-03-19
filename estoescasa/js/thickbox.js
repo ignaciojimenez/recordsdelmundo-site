@@ -42,14 +42,6 @@ function TB_overlaySize(){
 	$("#TB_HideSelect").css({"height": yScroll,"width": xScroll});
 }
 
-function TB_load_position() {
-	var pagesize = TB_getPageSize();
-	var arrayPageScroll = TB_getPageScrollTop();
-	$("#TB_load")
-		.css({left: (arrayPageScroll[0] + (pagesize[0] - 100)/2), top: (arrayPageScroll[1] + ((pagesize[1]-100)/2)) })
-		.css({display:"block"});
-}
-
 function TB_parseQuery ( query ) {
 	// return empty object
 	if( !query )
@@ -91,6 +83,14 @@ function TB_getPageSize(){
 	var h = window.innerHeight || self.innerHeight || (de&&de.clientHeight) || document.body.clientHeight
 	arrayPageSize = new Array(w,h)
 	return arrayPageSize;
+}
+
+function TB_load_position() {
+	var pagesize = TB_getPageSize();
+	var arrayPageScroll = TB_getPageScrollTop();
+	$("#TB_load")
+		.css({left: (arrayPageScroll[0] + (pagesize[0] - 100)/2), top: (arrayPageScroll[1] + ((pagesize[1]-100)/2)) })
+		.css({display:"block"});
 }
 
 function TB_position() {
