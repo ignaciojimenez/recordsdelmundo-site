@@ -43,7 +43,7 @@ require("../../head.php");
 				require("../../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 
 			<?php
@@ -56,52 +56,52 @@ require("../../head.php");
 				$csvFile = '../productos.csv';
 
 				$datos = readCSV($csvFile);
-				
+
 				if ($datos[$producto]["tipo"] == "disco"){
 					echo "<div class='imagenDisco' style='text-align:left;font-family:Arial; font-size:12px;'>";
-					echo "<img src='../../images/tienda/" . $datos[$producto]["img"] . ".jpg' />";
-					echo "<br><strong>Formato:</strong> " . $datos[$producto]["formato"];
-					echo "<br><strong>Lanzamiento:</strong>  " . $datos[$producto]["lanzamiento"];
+					echo "<img src='../../images/tienda/" . htmlspecialchars($datos[$producto]["img"]) . ".jpg' />";
+					echo "<br><strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
+					echo "<br><strong>Lanzamiento:</strong>  " . htmlspecialchars($datos[$producto]["lanzamiento"]);
 					if ($datos[$producto]["estado"] == "ok"){
-						echo "<br><strong>Precio:</strong>  " . $datos[$producto]["precio"] . " (Envío)";
+						echo "<br><strong>Precio:</strong>  " . htmlspecialchars($datos[$producto]["precio"]) . " (Envío)";
 						echo "<br>";
 						echo "<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post' style='display:inline-block'>";
 							echo "<input type='hidden' name='cmd' value='_s-xclick'>";
-							echo "<input type='hidden' name='hosted_button_id' value='" . $datos[$producto]["btnppal"] . "'>";
+							echo "<input type='hidden' name='hosted_button_id' value='" . htmlspecialchars($datos[$producto]["btnppal"]) . "'>";
 							echo "<input type='image' src='../../images/tienda/comprar.png' border='0' class='button' name='submit' value='Comprar' alt=''>";
 							echo "<img alt='' border='0' src='https://www.paypal.com/es_ES/i/scr/pixel.gif' width='1' height='1'>";
 						echo "</form>";
-						echo "<a href='../../mp3/" . $datos[$producto]["grupo"] . "_". $datos[$producto]["nombre"].".zip' class='descarga' style='margin-left:7px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
+						echo "<a href='../../mp3/" . htmlspecialchars($datos[$producto]["grupo"]) . "_". htmlspecialchars($datos[$producto]["nombre"]).".zip' class='descarga' style='margin-left:7px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
 					}
 					else if($datos[$producto]["estado"] == "lanzamiento"){
-						echo "<br><strong>Precio:</strong>  " . $datos[$producto]["precio"] . " (Envío)";
+						echo "<br><strong>Precio:</strong>  " . htmlspecialchars($datos[$producto]["precio"]) . " (Envío)";
 						echo "<br>Este disco estar&aacute; disponible próximamente.<br>Suscríbete a nuestra newsletter para estar informado";
 					}
 					else if($datos[$producto]["estado"] == "preorder"){
-						echo "<br><strong>Precio especial pre-order:</strong>  " . $datos[$producto]["precio"] . " (Envío)";
+						echo "<br><strong>Precio especial pre-order:</strong>  " . htmlspecialchars($datos[$producto]["precio"]) . " (Envío)";
 						echo "<br>";
 						echo "<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post' style='display:inline-block'>";
 							echo "<input type='hidden' name='cmd' value='_s-xclick'>";
-							echo "<input type='hidden' name='hosted_button_id' value='" . $datos[$producto]["btnppal"] . "'>";
+							echo "<input type='hidden' name='hosted_button_id' value='" . htmlspecialchars($datos[$producto]["btnppal"]) . "'>";
 							echo "<input type='image' src='../../images/tienda/comprar.png' border='0' class='button' name='submit' value='Comprar' alt=''>";
 							echo "<img alt='' border='0' src='https://www.paypal.com/es_ES/i/scr/pixel.gif' width='1' height='1'>";
 						echo "</form>";
 						echo "<br>Los env&iacute;os comenzar&aacute;n la primera semana de mayo";
 						echo "<br>La semana antes del lanzamiento os haremos llegar un enlace de descarga";
-						//echo "<a href='../../mp3/" . $datos[$producto]["grupo"] . "_". $datos[$producto]["nombre"].".zip' class='descarga' style='margin-left:7px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
+						//echo "<a href='../../mp3/" . htmlspecialchars($datos[$producto]["grupo"]) . "_". htmlspecialchars($datos[$producto]["nombre"]).".zip' class='descarga' style='margin-left:7px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
 					}
 					else{
 						echo "<br>Este disco no está disponible actualmente.<br>";
-						echo "<a href='../../mp3/" . $datos[$producto]["grupo"] . "_". $datos[$producto]["nombre"].".zip' class='descarga' style='display:inline-block;' ><img src='../../images/tienda/descargar.png' border='0'></a>";
+						echo "<a href='../../mp3/" . htmlspecialchars($datos[$producto]["grupo"]) . "_". htmlspecialchars($datos[$producto]["nombre"]).".zip' class='descarga' style='display:inline-block;' ><img src='../../images/tienda/descargar.png' border='0'></a>";
 					}
 					echo "</div>";
 					echo '<div class="playerDisco">';
 					if ($datos[$producto]["bcalbum"] != ""){
 						if ($datos[$producto]["estado"] == "preorder"){
-							echo '<iframe style="border: 0; width: 100%; height: 42px;" src="http://bandcamp.com/EmbeddedPlayer/track=' . $datos[$producto]["bcalbum"] . '/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless>Casi Nunca by Atencion Tsunami</iframe>';
+							echo '<iframe style="border: 0; width: 100%; height: 42px;" src="http://bandcamp.com/EmbeddedPlayer/track=' . htmlspecialchars($datos[$producto]["bcalbum"]) . '/size=small/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless>Casi Nunca by Atencion Tsunami</iframe>';
 						}
 						else{
-							echo '<iframe id="bc" width="300" height="390" style="position: relative; width: 300px; height: 390px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=' . $datos[$producto]["bcalbum"] . '/size=grande2/bgcol=FFFFFF/linkcol=333333/debug=true/" allowtransparency="true" frameborder="0"></iframe>';
+							echo '<iframe id="bc" width="300" height="390" style="position: relative; width: 300px; height: 390px;" src="http://bandcamp.com/EmbeddedPlayer/v=2/album=' . htmlspecialchars($datos[$producto]["bcalbum"]) . '/size=grande2/bgcol=FFFFFF/linkcol=333333/debug=true/" allowtransparency="true" frameborder="0"></iframe>';
 						}
 					}else{
 						echo "<span style='font-size:36;text-align:left;'>EL DISCO SELECCIONADO<br>NO PUEDE ESCUCHARSE<br>ACTUALMENTE</span>";
@@ -112,7 +112,7 @@ require("../../head.php");
 					echo "TODO";
 				}
 				?>
-			</div>	
+			</div>
 		</div>
 	</div>
 </body>
