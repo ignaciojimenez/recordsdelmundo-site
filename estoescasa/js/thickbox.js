@@ -22,13 +22,6 @@ function TB_remove() {
 	return false;
 }
 
-function TB_position() {
-	var pagesize = TB_getPageSize();
-	var arrayPageScroll = TB_getPageScrollTop();
-	var style = {width: TB_WIDTH, left: (arrayPageScroll[0] + (pagesize[0] - TB_WIDTH)/2), top: (arrayPageScroll[1] + (pagesize[1]-TB_HEIGHT)/2)};
-	$("#TB_window").css(style);
-}
-
 function TB_overlaySize(){
 	if (window.innerHeight && window.scrollMaxY || window.innerWidth && window.scrollMaxX) {
 		yScroll = window.innerHeight + window.scrollMaxY;
@@ -99,6 +92,14 @@ function TB_getPageSize(){
 	arrayPageSize = new Array(w,h)
 	return arrayPageSize;
 }
+
+function TB_position() {
+	var pagesize = TB_getPageSize();
+	var arrayPageScroll = TB_getPageScrollTop();
+	var style = {width: TB_WIDTH, left: (arrayPageScroll[0] + (pagesize[0] - TB_WIDTH)/2), top: (arrayPageScroll[1] + (pagesize[1]-TB_HEIGHT)/2)};
+	$("#TB_window").css(style);
+}
+
 
 // called when the user clicks on a thickbox link
 function TB_show(caption, url, rel) {
