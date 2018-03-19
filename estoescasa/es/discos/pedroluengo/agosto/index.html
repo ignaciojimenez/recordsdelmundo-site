@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso8551-2">
+	
+	<title>estoescasa.com</title>
+	<link rel="shortcut icon" href="../../../../images/favicon.ico" type="image/x-icon">
+	
+	<link rel="stylesheet" href="../../../../css/style.css" type="text/css">
+	<link rel="stylesheet" href="../../../../css/thickbox.css" type="text/css">
+	
+	<style type="text/css">
+	body {
+		/*background-image: url(../../../../images/logo_back.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;*/
+	}
+
+	a.thickbox { border: none; }
+	a.thickbox img { border: 3px solid #fff; margin: 0 6px 9px 0; }
+	
+	#img-container	{ margin: 0; padding: 0; }
+	#img-container p { width: 400px; margin: 0; padding: 0 0 12px 0; }
+	</style>
+	
+	<script type="text/javascript" src="../../../../js/jquery.js"></script>
+	<script type="text/javascript" src="../../../../js/thickbox.js"></script>
+	<script type="text/javascript" src="../../../../js/playMp3.js"></script>
+
+	<script type='text/javascript'>
+		var loadingAnim = 'http://www.estoescasa.com/';
+	</script>
+
+	<script type="text/javascript">
+		/***********************************************
+		* Contractible Headers script- © Dynamic Drive (www.dynamicdrive.com)
+		* This notice must stay intact for legal use. Last updated Mar 23rd, 2004.
+		* Visit http://www.dynamicdrive.com/ for full source code
+		***********************************************/
+		
+		var enablepersist="off" //Enable saving state of content structure using session cookies? (on/off)
+		var collapseprevious="yes" //Collapse previously open content when opening present? (yes/no)
+		
+		if (document.getElementById){
+		document.write('<style type="text/css">')
+		document.write('.switchcontent{display:none;}')
+		document.write('</style>')
+		}
+		
+		function getElementbyClass(classname){
+		ccollect=new Array()
+		var inc=0
+		var alltags=document.all? document.all : document.getElementsByTagName("*")
+		for (i=0; i<alltags.length; i++){
+		if (alltags[i].className==classname)
+		ccollect[inc++]=alltags[i]
+		}
+		}
+		
+		function contractcontent(omit){
+		var inc=0
+		while (ccollect[inc]){
+		if (ccollect[inc].id!=omit)
+		ccollect[inc].style.display="none"
+		inc++
+		}
+		}
+		
+		function expandcontent(cid){
+		if (typeof ccollect!="undefined"){
+		if (collapseprevious=="yes")
+		contractcontent(cid)
+		document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+		}
+		}
+		
+		function revivecontent(){
+		contractcontent("omitnothing")
+		selectedItem=getselectedItem()
+		selectedComponents=selectedItem.split("|")
+		for (i=0; i<selectedComponents.length-1; i++)
+		document.getElementById(selectedComponents[i]).style.display="block"
+		}
+		
+		function get_cookie(Name) { 
+		var search = Name + "="
+		var returnvalue = "";
+		if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		if (offset != -1) { 
+		offset += search.length
+		end = document.cookie.indexOf(";", offset);
+		if (end == -1) end = document.cookie.length;
+		returnvalue=unescape(document.cookie.substring(offset, end))
+		}
+		}
+		return returnvalue;
+		}
+		
+		function getselectedItem(){
+		if (get_cookie(window.location.pathname) != ""){
+		selectedItem=get_cookie(window.location.pathname)
+		return selectedItem
+		}
+		else
+		return ""
+		}
+		
+		function saveswitchstate(){
+		var inc=0, selectedItem=""
+		while (ccollect[inc]){
+		if (ccollect[inc].style.display=="block")
+		selectedItem+=ccollect[inc].id+"|"
+		inc++
+		}
+		
+		document.cookie=window.location.pathname+"="+selectedItem
+		}
+		
+		function do_onload(){
+		uniqueidn=window.location.pathname+"firsttimeload"
+		getElementbyClass("switchcontent")
+		if (enablepersist=="on" && typeof ccollect!="undefined"){
+		document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+		firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+		if (!firsttimeload)
+		revivecontent()
+		}
+		}
+		
+		
+		if (window.addEventListener)
+		window.addEventListener("load", do_onload, false)
+		else if (window.attachEvent)
+		window.attachEvent("onload", do_onload)
+		else if (document.getElementById)
+		window.onload=do_onload
+		
+		if (enablepersist=="on" && document.getElementById)
+		window.onunload=saveswitchstate		
+	</script>
+	
+</head>
+
+<body>
+<img src="../../../../images/banner.png" USEMAP="#mapabanner" style="border:0px;"/>
+<map name="mapabanner">
+<area shape="circle" coords="112,75,53" href="../../../">
+</map>
+	<div id="menu">
+		<div class="container">
+      <ul>
+        <li class="section-title">_DISCOS</li>
+        <li class="section-content"><a href="../../autumncomets/parades" >. autumn comets - parades</a></li>
+        <li class="section-content"><a href="../../havalina/junio" >. havalina - junio</a></li>
+        <li class="section-content"><a href="../../healthcontrol/estacalma" >. healthcontrol - estacalma</a></li>
+		<li class="section-content"  style="background-color:#FFFF00;"><a href="../../pedroluengo/agosto" >. pedro luengo - agosto</a></li>
+        <li class="section-content"><a href="../../whygo/whygo" >. why go - why go</a></li>
+      </ul>
+	
+			<ul>
+        <li class="section-title">_ENLACES</li>
+        <li class="section-content"><a href="https://www.facebook.com/autumncomets" target="_self">. Autumn Comets</a></li>
+        <li class="section-content"><a href="https://www.facebook.com/HavalinaMadrid" target="_self">. Havalina</a></li>
+		<li class="section-content"><a href="https://www.facebook.com/pedro.luengofernandez" target="_self">. Pedro Luengo</a></li>
+        <li class="section-content"><a href="https://www.facebook.com/why.go.1" target="_self">. Why Go</a></li>
+		</ul>
+			
+			<ul>
+				<li class="section-title-link"><a href="../../../informacion" >_INFORMACIÓN</a></li>
+			</ul>
+
+			<p>
+			<span class="link">estoescasa.com</span>
+			</p>
+		</div>	
+	</div>	
+	
+	<div id="content">
+		<div class="container">
+
+				Disco:  <b>Agosto</b><br/>
+Formato: <b>Vinilo y CD</b><br/>
+Lanzamiento:  <b>Mayo 2014</b><br/>
+Artista:  <b>Pedro Luengo</b><br/>
+
+<p>Tracklist:</p>
+<p>
+<!-- .mp3 -->
+<a href="../../../../mp3/pl/agosto/1.mp3"></a>&nbsp;01. <b>Trozo de papel.</b> 2:50<br/>
+<a href="../../../../mp3/pl/agosto/2.mp3"></a>&nbsp;02. <b>Invierno Nuclear</b> 3:11<br/>
+<a href="../../../../mp3/pl/agosto/3.mp3"></a>&nbsp;03. <b>Viejos Hábitos</b> 3:38<br/>
+<a href="../../../../mp3/pl/agosto/4.mp3"></a>&nbsp;04. <b>Systemic Risk</b> 3:25<br/>
+<a href="../../../../mp3/pl/agosto/5.mp3"></a>&nbsp;05. <b>Statements</b> 4:02<br/>
+<a href="../../../../mp3/pl/agosto/6.mp3"></a>&nbsp;06. <b>Los Vueltos</b> 4:16<br/>
+<a href="../../../../mp3/pl/agosto/7.mp3"></a>&nbsp;07. <b>Turbulencia</b> 4:04<br/>
+<a href="../../../../mp3/pl/agosto/8.mp3"></a>&nbsp;08. <b>Mi Ruta Vertical</b> 3:17<br/>
+<a href="../../../../mp3/pl/agosto/9.mp3"></a>&nbsp;09. <b>Apartado</b> 4:02<br/>	
+<a href="../../../../mp3/pl/agosto/10.mp3"></a>&nbsp;10. <b>Change Your World</b> 4:13<br/><br/>
+</p>
+
+			<p>
+			Este disco está disponible en dos formatos con distinto precio:
+			</p>
+			CD <b>8€</b> + <b>2€</b> envío
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="KMUE25YBGRYC2">
+				<input type="image" src="../../../../images/comprar.gif" border="0" class="button" name="submit" value="Comprar" alt="" >
+				<img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+			</form> 
+			Vinilo <b>17€</b> + <b>3€</b> envío
+			<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="LHWVFGXL8Q2MQ">
+				<input type="image" src="../../../../images/comprar.gif" border="0" class="button" name="submit" value="Comprar" alt="" >
+				<img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+			</form> 
+			<b>Nota:</b> <i>Al finalizar la compra accederás a una página desde la cual podrás descargarte el disco en mp3</i><br/>
+	
+
+
+			<!-- text and image -->
+			
+			<div class="cl"><!-- --></div>
+			<!--
+			<div id='img-container'>
+						
+			<a href="../../../../images/discos/ac/par/01.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/ac/par/01.jpg" alt="" height="150"></a>
+
+			<a href="../../../../images/discos/ac/par/02.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/ac/par/02.jpg" alt="" height="150"></a>
+
+			<a href="../../../../images/discos/ac/par/03.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/ac/par/03.jpg" alt="" height="150"></a>
+			
+			<a href="../../../../images/discos/ac/par/04.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/ac/par/04.jpg" alt="" height="150"></a>
+
+			<a href="../../../../images/discos/ac/par/05.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/ac/par/05.jpg" alt="" height="150"></a>
+			
+			<a href="../../../../images/discos/ac/par/06.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/ac/par/06.jpg" alt="" height="150"></a>
+
+			</div>
+			-->
+		<!-- end text and image -->
+		</div>
+	</div>
+
+</body>
+</html>

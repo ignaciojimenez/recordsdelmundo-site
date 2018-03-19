@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso8551-2">
+  
+  <title>estoescasa.com</title>
+  <link rel="shortcut icon" href="../../../../images/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../../../css/thickbox.css" type="text/css">
+  
+  <style type="text/css">
+  body {
+    /*background-image: url(../../../../images/logo_back.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;*/
+  }
+
+  a.thickbox { border: none; }
+  a.thickbox img { border: 3px solid #fff; margin: 0 6px 9px 0; }
+  
+  #img-container  { margin: 0; padding: 0; }
+  #img-container p { width: 400px; margin: 0; padding: 0 0 12px 0; }
+  </style>
+  
+  <script type="text/javascript" src="../../../../js/jquery.js"></script>
+  <script type="text/javascript" src="../../../../js/thickbox.js"></script>
+  <script type="text/javascript" src="../../../../js/playMp3.js"></script>
+
+  <script type='text/javascript'>
+    var loadingAnim = 'http://www.estoescasa.com/';
+  </script>
+
+  <script type="text/javascript">
+    /***********************************************
+    * Contractible Headers script- ÔøΩ Dynamic Drive (www.dynamicdrive.com)
+    * This notice must stay intact for legal use. Last updated Mar 23rd, 2004.
+    * Visit http://www.dynamicdrive.com/ for full source code
+    ***********************************************/
+    
+    var enablepersist="off" //Enable saving state of content structure using session cookies? (on/off)
+    var collapseprevious="yes" //Collapse previously open content when opening present? (yes/no)
+    
+    if (document.getElementById){
+    document.write('<style type="text/css">')
+    document.write('.switchcontent{display:none;}')
+    document.write('</style>')
+    }
+    
+    function getElementbyClass(classname){
+    ccollect=new Array()
+    var inc=0
+    var alltags=document.all? document.all : document.getElementsByTagName("*")
+    for (i=0; i<alltags.length; i++){
+    if (alltags[i].className==classname)
+    ccollect[inc++]=alltags[i]
+    }
+    }
+    
+    function contractcontent(omit){
+    var inc=0
+    while (ccollect[inc]){
+    if (ccollect[inc].id!=omit)
+    ccollect[inc].style.display="none"
+    inc++
+    }
+    }
+    
+    function expandcontent(cid){
+    if (typeof ccollect!="undefined"){
+    if (collapseprevious=="yes")
+    contractcontent(cid)
+    document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+    }
+    }
+    
+    function revivecontent(){
+    contractcontent("omitnothing")
+    selectedItem=getselectedItem()
+    selectedComponents=selectedItem.split("|")
+    for (i=0; i<selectedComponents.length-1; i++)
+    document.getElementById(selectedComponents[i]).style.display="block"
+    }
+    
+    function get_cookie(Name) { 
+    var search = Name + "="
+    var returnvalue = "";
+    if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { 
+    offset += search.length
+    end = document.cookie.indexOf(";", offset);
+    if (end == -1) end = document.cookie.length;
+    returnvalue=unescape(document.cookie.substring(offset, end))
+    }
+    }
+    return returnvalue;
+    }
+    
+    function getselectedItem(){
+    if (get_cookie(window.location.pathname) != ""){
+    selectedItem=get_cookie(window.location.pathname)
+    return selectedItem
+    }
+    else
+    return ""
+    }
+    
+    function saveswitchstate(){
+    var inc=0, selectedItem=""
+    while (ccollect[inc]){
+    if (ccollect[inc].style.display=="block")
+    selectedItem+=ccollect[inc].id+"|"
+    inc++
+    }
+    
+    document.cookie=window.location.pathname+"="+selectedItem
+    }
+    
+    function do_onload(){
+    uniqueidn=window.location.pathname+"firsttimeload"
+    getElementbyClass("switchcontent")
+    if (enablepersist=="on" && typeof ccollect!="undefined"){
+    document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+    firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+    if (!firsttimeload)
+    revivecontent()
+    }
+    }
+    
+    
+    if (window.addEventListener)
+    window.addEventListener("load", do_onload, false)
+    else if (window.attachEvent)
+    window.attachEvent("onload", do_onload)
+    else if (document.getElementById)
+    window.onload=do_onload
+    
+    if (enablepersist=="on" && document.getElementById)
+    window.onunload=saveswitchstate    
+  </script>
+  
+</head>
+
+<body>
+<img src="../../../../images/banner.png" USEMAP="#mapabanner" style="border:0px;"/>
+<map name="mapabanner">
+<area shape="circle" coords="112,75,53" href="http://www.estoescasa.com">
+</map>
+  <div id="menu">
+    <div class="container">
+      <ul>
+        <li class="section-title">_DISCOS</li>
+        <li class="section-content"><a href="../../autumncomets/parades" >. autumn comets - parades</a></li>
+        <li class="section-content"><a href="../../havalina/junio" >. havalina - junio</a></li>
+        <li class="section-content"><a href="../../healthcontrol/estacalma" >. healthcontrol - estacalma</a></li>
+        <li class="section-content"><a href="../../whygo/whygo" >. why go - why go</a></li>
+      </ul>
+      
+      <ul>
+        <li class="section-title">_ENLACES</li>
+        <li class="section-content"><a href="https://www.facebook.com/autumncomets" target="_self">. Autumn Comets</a></li>
+        <li class="section-content"><a href="https://www.facebook.com/HavalinaMadrid" target="_self">. Havalina</a></li>
+        <li class="section-content"><a href="https://www.facebook.com/why.go.1" target="_self">. Why Go</a></li>
+		<li class="section-content"><a href="http://www.sonsolesalvarez.com" target="_self">. Sonsoles ¡Ålvarez</a></li>
+      </ul>
+
+      <ul>
+        <li class="section-title-link"><a href="../../../informacion" >_INFORMACI”N</a></li>
+      </ul>
+      
+      <p>
+      <span class="link">estoescasa.com</span>
+      <br/>
+      <span class="contacto"><a href="javascript:location.href='mailto:'+String.fromCharCode(105,110,102,111,64,101,115,116,111,101,115,99,97,115,97,46,99,111,109)">info//estoescasa.com</a></span>
+      </p>
+    </div>  
+  </div>  
+  
+  <div id="content">
+    <div class="container">
+
+
+    Disco:  <b>El cuerpo humano</b><br/>
+Formato: <b>Vinilo 12'' + CD</b><br/>
+Lanzamiento:  <b>Marzo 2013</b><br/>
+Grupo:  <b>Incendios</b><br/>
+Componentes:  <b>Miguel Bellas, IÒaki JimÈnez, ¡Ålvaro Marcos, David Moralejo, AarÛn PalazÛn, Pablo Moreno</b><br/><br/>
+
+<p>Tracklist:</p>
+<p>
+  <a href="http://www.estoescasa.com/mp3/incendios/ech/400.mp3"></a>&nbsp;01. <b>400 Estilos</b>          3:21<br/>
+  <a href="http://www.estoescasa.com/mp3/incendios/ech/aprendiz.mp3"></a>&nbsp;02. <b>El aprendiz de mago</b>        4:36<br/>
+  <a href="http://www.estoescasa.com/mp3/incendios/ech/salto.mp3"></a>&nbsp;03. <b>Salto</b>      6:33<br/>
+  <a href="http://www.estoescasa.com/mp3/incendios/ech/naves.mp3"></a>&nbsp;04. <b>Naves</b>   1:41<br/>
+  <a href="http://www.estoescasa.com/mp3/incendios/ech/mueve.mp3"></a>&nbsp;05. <b>MuevemontaÒas</b>  4:27<br/>
+  <a href="http://www.estoescasa.com/mp3/incendios/ech/manipula.mp3"></a>&nbsp;06. <b>Manipula </b>       6:19<br/><br/>
+</p>
+
+      
+      <!--<b>Puedes reservar una copia del disco para recibirla a partir de mediados de marzo</b><br/><br/> -->
+                        <!-- <font style="color:silver;"> -->
+                        Pulsa en el siguiente botÛn para pagar <b>12Ä</b> por el disco m·s <b>3Ä</b> de gastos de envÌo:<br/>
+      <b>Nota:</b> <i>Al finalizar la compra acceder·s a una p·gina desde la cual podr·s descargarte el disco en mp3</i><br/>
+                        <!-- </font> -->
+
+                        <br/>
+                         
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="3PD4B4QQ8X7CA">
+        <input type="image" src="../../../../images/comprar.gif" border="0" class="button" name="submit" value="Comprar" alt="" >
+        <img alt="" border="0" src="https://www.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+      </form> 
+                       
+      <!-- text and image -->
+      
+      <div class="cl"><!-- --></div>
+      
+      <div id='img-container'>
+      
+      <a href="../../../../images/discos/incendios/ech/disco_01.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/incendios/ech/disco_01.jpg" alt="" height="150"></a>
+
+      <a href="../../../../images/discos/incendios/ech/disco_02.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/incendios/ech/disco_02.jpg" alt="" height="150"></a>
+
+      <a href="../../../../images/discos/incendios/ech/disco_03.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/incendios/ech/disco_03.jpg" alt="" height="150"></a>
+
+      <a href="../../../../images/discos/incendios/ech/disco_04.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/incendios/ech/disco_04.jpg" alt="" height="150"></a>
+      
+      <a href="../../../../images/discos/incendios/ech/disco_05.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/incendios/ech/disco_05.jpg" alt="" height="150"></a>
+
+      <a href="../../../../images/discos/incendios/ech/disco_07.jpg" title="" class="thickbox" rel="atelo"><img src="../../../../images/discos/incendios/ech/disco_07.jpg" alt="" height="150"></a>
+
+      </div>
+    <!-- end text and image -->
+     Si por cualquier motivo (ya has comprado el disco, trabajas en alguna promotora, te parece ridÌculo pagar por un disco en el siglo XXI, o vaya usted a saber quÈ) quieres <b>descargar el disco completo en mp3</b>, sÛlo tienes que enviarnos un correo electrÛnico a <a href="javascript:location.href='mailto:'+String.fromCharCode(112,101,100,105,100,111,115,64,101,115,116,111,101,115,99,97,115,97,46,99,111,109)">pedidos//estoescasa.com</a> indic·ndonoslo.    
+
+    </div>
+  </div>
+
+</body>
+</html>      
