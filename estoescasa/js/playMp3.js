@@ -1,9 +1,7 @@
 
 // Change these two lines to modify your PLAY and STOP buttons.
-var mp3PlayButton = "../images/play2.gif";
-var mp3StopButton = "../images/stop2.gif";
-
-
+var mp3PlayButton = "https://www.recordsdelmundo.es/estoescasa/images/play2.gif";
+var mp3StopButton = "https://www.recordsdelmundo.es/estoescasa/images/stop2.gif";
 
 if(typeof(TagTooga) == 'undefined')
 	TagTooga = {}
@@ -51,8 +49,8 @@ TagTooga.Mp3 =
 			'<param name="wmode" value="transparent" />' +
 			'<param name="allowScriptAccess" value="sameDomain" />' +
 			'<param name="flashVars" value="theLink='+url+'" />' +
-			'<param name="movie" value="../swf/playMp3.swf" /><param name="quality" value="high" />' +
-			'<embed style="vertical-align:bottom;margin-right:0.2em" src="../swf/playMp3.swf" flashVars="theLink='+url+'"'+
+			'<param name="movie" value="https://www.recordsdelmundo.es/estoescasa/swf/playMp3.swf" /><param name="quality" value="high" />' +
+			'<embed style="vertical-align:bottom;margin-right:0.2em" src="https://www.recordsdelmundo.es/estoescasa/swf/playMp3.swf" flashVars="theLink='+url+'"'+
 			'quality="high" wmode="transparent" width="1" height="1" name="player"' +
 			'align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"' +
 			' pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>';
