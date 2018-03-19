@@ -46,7 +46,7 @@ TagTooga.Mp3 =
 		TagTooga.Mp3.playimg = img;
 		TagTooga.Mp3.player = document.createElement('span');
 		TagTooga.Mp3.player.innerHTML = 'playing...<object style="vertical-align:bottom;margin-right:0.2em" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"' +
-'codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"' +
+'codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"' +
 			'width="1" height="1" id="player" align="middle">' +
 			'<param name="wmode" value="transparent" />' +
 			'<param name="allowScriptAccess" value="sameDomain" />' +
