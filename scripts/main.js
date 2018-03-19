@@ -1,7 +1,39 @@
 /**********************************************************
-Código para el envio de la petición de alta en el mailing
+Cï¿½digo para la validacion del correo electronico
+**********************************************************/
+function echeck(str) {
+	var at="@"
+	var dot="."
+	var lat=str.indexOf(at)
+	var lstr=str.length
+	var ldot=str.indexOf(dot)
+
+	if (str.indexOf(at)==-1){return false}
+	if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){return false}
+	if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){return false}
+	if (str.indexOf(at,(lat+1))!=-1){return false}
+	if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){return false}
+	if (str.indexOf(dot,(lat+2))==-1){return false}
+	if (str.indexOf(" ")!=-1){return false}
+	return true
+}
+
+/**********************************************************
+Cï¿½digo para el envio de la peticiï¿½n de alta en el mailing
 **********************************************************/
 var http_request = false;
+
+function alertContents() {
+	if (http_request.readyState == 4) {
+		if (http_request.status == 200) {
+			//alert(http_request.responseText);
+			result = http_request.responseText;
+			$('.success').text(result).fadeIn(1600).delay(2000).fadeOut(1600);
+			$('#mailing_mail').val('');
+		} else {//alert('There was a problem with the request.');
+		}
+	}
+}
 
 //funcion que envia los parametros y el formulario
 function makeRequest(url, parameters) {
@@ -31,24 +63,12 @@ function makeRequest(url, parameters) {
 	http_request.send(null);
 }
 
-function alertContents() {
-	if (http_request.readyState == 4) {
-		if (http_request.status == 200) {
-			//alert(http_request.responseText);
-			result = http_request.responseText;
-			$('.success').text(result).fadeIn(1600).delay(2000).fadeOut(1600);
-			$('#mailing_mail').val('');
-		} else {//alert('There was a problem with the request.');
-		}
-	}
-}
-   
 function get() {
 	document.getElementById('success').innerHTML ="";
 	var getstr = "?";
-	//el objeto es estático => el formulario que contiene los controles
-	var mail = "";		
-	mail=document.getElementById("mailing_mail").value;		
+	//el objeto es estï¿½tico => el formulario que contiene los controles
+	var mail = "";
+	mail=document.getElementById("mailing_mail").value;
 	if (!echeck(mail)){$('.success').text("Formato incorrecto").fadeIn(1600).delay(2000).fadeOut(1600); $('#mailing_mail').val('');}
 	else{
 		getstr += document.getElementById("mailing_mail").name + "=" + mail
@@ -56,25 +76,7 @@ function get() {
 		makeRequest('mailing/mcapi_listSubscribe.php', getstr);
 	}
 }
-/**********************************************************
-Código para la validacion del correo electronico
-**********************************************************/
-function echeck(str) {
-	var at="@"
-	var dot="."
-	var lat=str.indexOf(at)
-	var lstr=str.length
-	var ldot=str.indexOf(dot)
-	
-	if (str.indexOf(at)==-1){return false}
-	if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){return false}
-	if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){return false}
-	if (str.indexOf(at,(lat+1))!=-1){return false}
-	if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){return false}
-	if (str.indexOf(dot,(lat+2))==-1){return false}	
-	if (str.indexOf(" ")!=-1){return false}		 
-	return true
-}
+
 /**********************************************************
 Codigo para el desplazamiento del menu de la cabecera
 **********************************************************/
@@ -85,7 +87,7 @@ document.getElementById("cabecera_menu1").style.marginTop="23px";
 document.getElementById("cabecera_menu2").style.marginTop="13px";
 document.getElementsByClassName("lateral_izq_inferior")[0].style.marginTop="400px";
 go('/');
-}	
+}
 function go(url){
 	$('.contenido').fadeOut(1000);
 	$('.lateral_izq_inferior').fadeOut(1000);
@@ -113,7 +115,7 @@ go(mostrar);
 }
 
 /**********************************************************
-Codigo para la ofuscación del mail
+Codigo para la ofuscaciï¿½n del mail
 **********************************************************/
 function printmail(nombre){
 	var name = nombre + "@recordsdelmundo.com";
