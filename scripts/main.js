@@ -44,7 +44,7 @@ function makeRequest(url, parameters) {
 		if (httpRequest.overrideMimeType) {
 			// set type accordingly to anticipated content type
 			//httpRequest.overrideMimeType('text/xml');
-			httpRequest.overrideMimeType('text/html');
+			httpRequest.overrideMimeType("text/html");
 		}
 	} else if (window.ActiveXObject) { // IE
 		try {
@@ -52,7 +52,7 @@ function makeRequest(url, parameters) {
 		} catch (e) {
 			try {
 			httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-			} catch (e) {}
+			} catch (e) {;}
 		}
 	}
 	if (!httpRequest) {
@@ -60,12 +60,12 @@ function makeRequest(url, parameters) {
 		return false;
 	}
 	httpRequest.onreadystatechange = alertContents;
-	httpRequest.open('GET', url + parameters, true);
+	httpRequest.open("GET", url + parameters, true);
 	httpRequest.send(null);
 }
 
 function get() {
-	document.getElementById('success').innerHTML ="";
+	document.getElementById("success").innerHTML ="";
 	var getstr = "?";
 	//el objeto es est�tico => el formulario que contiene los controles
 	var mail = "";
@@ -81,6 +81,12 @@ function get() {
 /**********************************************************
 Codigo para el desplazamiento del menu de la cabecera
 **********************************************************/
+function go(url){
+	$(".contenido").fadeOut(1000);
+	$(".lateral_izq_inferior").fadeOut(1000);
+	setTimeout(function(){ window.location = url; }, 1000);
+}
+
 function mostrar(){
 document.getElementById("cabecera_siglas_img").style.marginTop="0px";
 document.getElementById("cabecera_logo").style.marginTop="65px";
@@ -88,11 +94,6 @@ document.getElementById("cabecera_menu1").style.marginTop="23px";
 document.getElementById("cabecera_menu2").style.marginTop="13px";
 document.getElementsByClassName("lateral_izq_inferior")[0].style.marginTop="400px";
 go('/');
-}
-function go(url){
-	$('.contenido').fadeOut(1000);
-	$('.lateral_izq_inferior').fadeOut(1000);
-	setTimeout(function(){ window.location = url; }, 1000);
 }
 
 function esconder(mostrar){
@@ -103,8 +104,7 @@ if (mostrar.indexOf("tienda") === -1){
 	document.getElementById("cabecera_menu1").style.marginTop="-10px";
 	document.getElementById("cabecera_menu2").style.marginTop="0px";
 }
-else if (mostrar.indexOf("producto") !== -1){
-}
+else if (mostrar.indexOf("producto") !== -1){;}
 else{
 	document.getElementById("cabecera_siglas_img").style.marginTop="0px";
 	document.getElementById("cabecera_logo").style.marginTop="-570px";
@@ -121,7 +121,7 @@ Codigo para la ofuscaci�n del mail
 function printmail(nombre){
 	var name = nombre + "@recordsdelmundo.es";
 	//element.innerHTML = nombre;
-	var mail = $('<div/>').text(name).html();
+	var mail = $("<div/>").text(name).html();
 	document.write("<a href=\"mailto:" + mail + "\">" + mail + "<\/a>");
 	//document.write(":" + nombre + "@");
 	//document.write(dominio + "\">" + nombre + "@" + dominio + "<\/a>");
