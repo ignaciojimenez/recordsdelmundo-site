@@ -1,5 +1,5 @@
 /**********************************************************
-C�digo para la validacion del correo electronico
+Codigo para la validacion del correo electronico
 **********************************************************/
 function echeck(str) {
 	var at="@";
@@ -19,7 +19,7 @@ function echeck(str) {
 }
 
 /**********************************************************
-C�digo para el envio de la petici�n de alta en el mailing
+Codigo para el envio de la peticion de alta en el mailing
 **********************************************************/
 var httpRequest = false;
 
@@ -52,7 +52,9 @@ function makeRequest(url, parameters) {
 		} catch (e) {
 			try {
 			httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
-			} catch (e) {;}
+			} catch (e) {
+			//ActiveXError
+			}
 		}
 	}
 	if (!httpRequest) {
@@ -74,7 +76,7 @@ function get() {
 	else{
 		getstr += document.getElementById("mailing_mail").name + "=" + mail;
 		//makeRequest('mailing/get.php', getstr);
-		makeRequest('mailing/mcapi_listSubscribe.php', getstr);
+		makeRequest("mailing/mcapi_listSubscribe.php", getstr);
 	}
 }
 
@@ -93,7 +95,7 @@ document.getElementById("cabecera_logo").style.marginTop="65px";
 document.getElementById("cabecera_menu1").style.marginTop="23px";
 document.getElementById("cabecera_menu2").style.marginTop="13px";
 document.getElementsByClassName("lateral_izq_inferior")[0].style.marginTop="400px";
-go('/');
+go("/");
 }
 
 function esconder(mostrar){
@@ -104,7 +106,9 @@ if (mostrar.indexOf("tienda") === -1){
 	document.getElementById("cabecera_menu1").style.marginTop="-10px";
 	document.getElementById("cabecera_menu2").style.marginTop="0px";
 }
-else if (mostrar.indexOf("producto") !== -1){;}
+else if (mostrar.indexOf("producto") !== -1){
+	//En caso de querer mostrar un producto
+	}
 else{
 	document.getElementById("cabecera_siglas_img").style.marginTop="0px";
 	document.getElementById("cabecera_logo").style.marginTop="-570px";
@@ -116,13 +120,10 @@ go(mostrar);
 }
 
 /**********************************************************
-Codigo para la ofuscaci�n del mail
+Codigo para la ofuscacion del mail
 **********************************************************/
-function printmail(nombre){
-	var name = nombre + "@recordsdelmundo.es";
-	//element.innerHTML = nombre;
-	var mail = $("<div/>").text(name).html();
-	document.write("<a href=\"mailto:" + mail + "\">" + mail + "<\/a>");
-	//document.write(":" + nombre + "@");
-	//document.write(dominio + "\">" + nombre + "@" + dominio + "<\/a>");
+function printmail(nombre,tagid){
+	var mail = nombre + "@recordsdelmundo.es";
+	var s0 = document.getElementById(tagid);
+	console.log(s0.innerHTML = s0.innerHTML + "<a href=\"mailto:" + mail + "\">" + mail + "<\/a>")
 }
