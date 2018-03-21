@@ -125,5 +125,8 @@ Codigo para la ofuscacion del mail
 function printmail(nombre,tagid){
 	var mail = nombre + "@recordsdelmundo.es";
 	var s0 = document.getElementById(tagid);
-	console.log(s0.innerHTML = s0.innerHTML + "<a href=\"mailto:" + mail + "\">" + mail + "<\/a>")
+	newlink = document.createElement("a");
+	newlink.setAttribute("href", "mailto:" + mail);
+	newlink.innerText =mail;
+	s0.appendChild(newlink);
 }
