@@ -27,6 +27,7 @@ function readCSV($csvFile){
 <?php
 require("../../head.php");
 ?>
+	<meta name="robots" content="noindex" />
 	<link href="../../style/store.css" type="text/css" rel="stylesheet" />
 </head>
 <body onload="$('.imagenDisco').fadeIn(900); $('.lateral_izq_inferior').fadeIn(900);">
@@ -43,7 +44,7 @@ require("../../head.php");
 				require("../../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 
 			<?php
@@ -56,7 +57,7 @@ require("../../head.php");
 				$csvFile = '../productos.csv';
 
 				$datos = readCSV($csvFile);
-				
+
 				if ($datos[$producto]["tipo"] == "disco"){
 					echo "<div class='imagenDisco' style='text-align:left;font-family:Arial; font-size:12px;'>";
 					echo "<img src='../../images/tienda/" . htmlspecialchars($datos[$producto]["img"]) . ".jpg' />";
@@ -112,7 +113,7 @@ require("../../head.php");
 					echo "TODO";
 				}
 				?>
-			</div>	
+			</div>
 		</div>
 	</div>
 </body>

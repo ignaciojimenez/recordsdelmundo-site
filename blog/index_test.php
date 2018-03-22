@@ -3,6 +3,7 @@
 <head>
 	<title>Records del mundo</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex" />
 	<link href="../style/fonts.css" type="text/css" rel="stylesheet" />
 	<link href="../style/common.css" type="text/css" rel="stylesheet" />
 	<link href="../style/back.css" type="text/css" rel="stylesheet" />
@@ -11,7 +12,7 @@
 	<script src="../scripts/es.js"></script>
 	<script src="../scripts/main.js"></script>
 	<script type="text/javascript">
-	
+
 	/**********************************************************
 	Codigo para el infinitescroll
 	**********************************************************/
@@ -24,14 +25,14 @@
 				//alert('scrolltop:'+$(window).scrollTop() +'  docheight:'+$(document).height()+'  winheigh:'+$(window).height());
 				//alert('scrolltop:'+$(window).scrollTop());
 				count = parseInt($('div.tumblr_post').last()[0].id.split("_")[1]);
-				
+
 		        $('div#loadmoreajaxloader').show();
 		    	$.ajax({
 				async:false,
 				cache:false,
 		        type: 'GET',
-				url: 'http://api.tumblr.com/v2/blog/recordsdelmundo.tumblr.com/posts/text?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm&offset='+count+'&limit=3', 
-				data: { get_param: 'value' }, 
+				url: 'http://api.tumblr.com/v2/blog/recordsdelmundo.tumblr.com/posts/text?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm&offset='+count+'&limit=3',
+				data: { get_param: 'value' },
 				dataType: 'jsonp',
 				ifModified:true,
 		        success: function(data)
@@ -40,7 +41,7 @@
 		            {
 						for (i = 0; i < 3; i++) {
 							count = count +1;
-							$('#contenido').append('http://api.tumblr.com/v2/blog/recordsdelmundo.tumblr.com/posts/text?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm&offset='+count+'&limit=3');						
+							$('#contenido').append('http://api.tumblr.com/v2/blog/recordsdelmundo.tumblr.com/posts/text?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm&offset='+count+'&limit=3');
 							$('#contenido').append('<div class="tumblr_post" id="post_'+count+'"><div class="tumblr_date">'+moment(data.response.posts[i].date).fromNow()+'</div><div class="tumblr_title"><a href="' + data.response.posts[i].post_url +'">'+ data.response.posts[i].title +'</a></div><div class="tumblr_body">'+data.response.posts[i].body+'</div></div><div style="border-bottom: 1px solid #aaa; width: 100%; margin-top:15px;"></div><br/>');
 						}
 						$('div#loadmoreajaxloader').hide();
@@ -71,7 +72,7 @@
 			require("../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 			<?php
 			require("../menu.php");
@@ -79,13 +80,13 @@
 
 			<div class="contenido" id="contenido">
 				<script type="text/javascript">
-				moment.lang('es');	
-				$.ajax({ 
+				moment.lang('es');
+				$.ajax({
 					type: 'GET',
-					url: 'http://api.tumblr.com/v2/blog/recordsdelmundo.tumblr.com/posts/text?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm&limit=3', 
-					data: { get_param: 'value' }, 
+					url: 'http://api.tumblr.com/v2/blog/recordsdelmundo.tumblr.com/posts/text?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm&limit=3',
+					data: { get_param: 'value' },
 					dataType: 'jsonp',
-					success: function (data) { 
+					success: function (data) {
 					for (i = 0; i <= 2; i++) {
 						cuenta = i+1;
 						$('#contenido').append('<div class="tumblr_post" id="post_'+cuenta+'"><div class="tumblr_date">'+moment(data.response.posts[i].date).fromNow()+'</div><div class="tumblr_title"><a href="' + data.response.posts[i].post_url +'">'+ data.response.posts[i].title +'</a></div><div class="tumblr_body">'+data.response.posts[i].body+'</div></div><div style="border-bottom: 1px solid #aaa; width: 100%; margin-top:15px;"></div><br/>');

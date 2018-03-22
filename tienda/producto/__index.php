@@ -27,6 +27,7 @@ function readCSV($csvFile){
 <?php
 require("../../head.php");
 ?>
+	<meta name="robots" content="noindex" />
 	<link href="../../style/store.css" type="text/css" rel="stylesheet" />
 </head>
 <body onload="$('.imagenDisco').fadeIn(900); $('.lateral_izq_inferior').fadeIn(900);">

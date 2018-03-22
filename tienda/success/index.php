@@ -8,6 +8,7 @@ require("../../head.php");
 ?>
 	<link href="../../style/back.css" type="text/css" rel="stylesheet" />
 	<link href="../../style/store.css" type="text/css" rel="stylesheet" />
+	<meta name="robots" content="noindex" />
 </head>
 <body onload="$('.contenido').fadeIn(1100);">
 	<div class="container">
@@ -22,7 +23,7 @@ require("../../head.php");
 				require("../../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 			<?php
 			require("../../menu.php");
@@ -37,4 +38,3 @@ require("../../head.php");
 	</div>
 </body>
 </html>
-		

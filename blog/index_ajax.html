@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Records del mundo</title>
+	<meta name="robots" content="noindex" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="../style/fonts.css" type="text/css" rel="stylesheet" />
 	<link href="../style/common.css" type="text/css" rel="stylesheet" />
@@ -54,13 +55,13 @@
 			}
 		}
 	}
-	   
+
 	function get() {
 		document.getElementById('success').innerHTML ="";
 		var getstr = "?";
 		//el objeto es estático => el formulario que contiene los controles
-		var mail = "";		
-		mail=document.getElementById("mailing_mail").value;		
+		var mail = "";
+		mail=document.getElementById("mailing_mail").value;
 		if (!echeck(mail)){$('.success').text("Formato incorrecto").fadeIn(1600).delay(2000).fadeOut(1600); $('#mailing_mail').val('');}
 		else{
 			getstr += document.getElementById("mailing_mail").name + "=" + mail
@@ -76,14 +77,14 @@
 		var lat=str.indexOf(at)
 		var lstr=str.length
 		var ldot=str.indexOf(dot)
-		
+
 		if (str.indexOf(at)==-1){return false}
 		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){return false}
 		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){return false}
 		if (str.indexOf(at,(lat+1))!=-1){return false}
 		if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){return false}
-		if (str.indexOf(dot,(lat+2))==-1){return false}	
-		if (str.indexOf(" ")!=-1){return false}		 
+		if (str.indexOf(dot,(lat+2))==-1){return false}
+		if (str.indexOf(" ")!=-1){return false}
 		return true
 	}
 	/**********************************************************
@@ -95,7 +96,7 @@
 	document.getElementById("cabecera_menu1").style.marginTop="23px";
 	document.getElementById("cabecera_menu2").style.marginTop="13px";
 	go('/recordsdelmundo');
-	}	
+	}
 	function go(url){
 		$('.contenido').fadeOut(1000);
 		setTimeout(function(){ window.location = url; }, 1000);
@@ -129,7 +130,7 @@
 
 			</div>
 		</div>
-		
+
 		<div class="centro">
 			<div class="cabecera_siglas_img transicion_cabeceras" id="cabecera_siglas_img">
 				<img src="../images/cabecera.jpg" />
@@ -141,18 +142,18 @@
 				<a href="#" onclick="go('../grupos/at');">ATENCIÓN TSUNAMI</a><a href="#" onclick="go('../grupos/inc');">INCENDIOS</a><!--<a href="../grupos/par">PARACAÍDAS</a>-->
 			</div>
 			<div class="cabecera_menu2 transicion_cabeceras" id="cabecera_menu2">
-				<a href="#" onclick="go('../quien');">QUIÉN</a>&nbsp;·&nbsp;<a href="#" onclick="go('../blog');">BLOG</a>&nbsp;·&nbsp;<a href="#" onclick="go('../tienda');">TIENDA</a>&nbsp;·&nbsp;<a href="#" onclick="go('../tour');">TOUR</a> 
+				<a href="#" onclick="go('../quien');">QUIÉN</a>&nbsp;·&nbsp;<a href="#" onclick="go('../blog');">BLOG</a>&nbsp;·&nbsp;<a href="#" onclick="go('../tienda');">TIENDA</a>&nbsp;·&nbsp;<a href="#" onclick="go('../tour');">TOUR</a>
 			</div>
 
 			<div class="contenido" id="contenido">
 				<script type="text/javascript">
 				moment.lang('es');
-				$.ajax({ 
+				$.ajax({
 					type: 'GET',
-					url: 'http://api.tumblr.com/v2/blog/ojalanoslleve.tumblr.com/posts?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm', 
-					data: { get_param: 'value' }, 
+					url: 'http://api.tumblr.com/v2/blog/ojalanoslleve.tumblr.com/posts?api_key=XIHsDbrc9qCF3uj5F1kavGgFuK8E5iIYmUGBTbnNXdad4RUDgm',
+					data: { get_param: 'value' },
 					dataType: 'jsonp',
-					success: function (data) { 
+					success: function (data) {
 					for (i = 0; i <= 19; i++) {
 						$('#contenido').append('<div class="tumblr_post"><div class="tumblr_date">'+moment(data.response.posts[i].date).fromNow()+'</div><div class="tumblr_title"><a href="' + data.response.posts[i].post_url +'">'+ data.response.posts[i].title +'</a></div><div class="tumblr_body">'+data.response.posts[i].body+'</div></div><div style="border-bottom: 1px solid #aaa; width: 100%; margin-top:15px;"></div><br/>');
 						}

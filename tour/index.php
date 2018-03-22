@@ -5,6 +5,7 @@
 require("../head.php");
 ?>
 	<link href="../style/back.css" type="text/css" rel="stylesheet" />
+	<meta name="robots" content="noindex" />
 </head>
 <body onload="$('.contenido').fadeIn(900);">
 	<div class="container">
@@ -19,7 +20,7 @@ require("../head.php");
 			require("../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 
 			<?php
@@ -44,8 +45,8 @@ require("../head.php");
 				<tr class="tourfila">
 					<td class="tourfecha">23/05/14</td>
 					<td class="tourgrupo">Incendios</td>
-					<td class="tourinfo">Madrid, <a href="https://es-es.facebook.com/elperroclub">El perro de la...</a> + <a href="http://borgenine.bandcamp.com/">Borgenine</a></td>			
-				</tr> 
+					<td class="tourinfo">Madrid, <a href="https://es-es.facebook.com/elperroclub">El perro de la...</a> + <a href="http://borgenine.bandcamp.com/">Borgenine</a></td>
+				</tr>
 				<tr class="tourfila">
 					<td class="tourfecha">06/06/14</td>
 					<td class="tourgrupo">Atención tsunami</td>
@@ -62,7 +63,7 @@ require("../head.php");
 				<tr class="tourfila">
 					<td class="tourfecha">12/06/14</td>
 					<td class="tourgrupo">Atención tsunami</td>
-					<td class="tourinfo">Madrid, <a href="www.holycuervo.com/">Cuervo Store</a> </td>			
+					<td class="tourinfo">Madrid, <a href="www.holycuervo.com/">Cuervo Store</a> </td>
 				</tr>
 				<tr class="tourfila">
 					<td class="tourfecha">20/06/14</td>
@@ -99,7 +100,7 @@ require("../head.php");
 					<td class="tourfecha">02/08/14</td>
 					<td class="tourgrupo">Atención tsunami</td>
 					<td class="tourinfo">Bueu, 22h, <a href="http://labranzameiro.blogspot.com.es/">Bar Labranza</a> + <a href="http://whygomusic.bandcamp.com/">Why Go</a></td>
-				</tr> 
+				</tr>
 				<tr class="tourfila">
 					<td class="tourfecha">08/08/14</td>
 					<td class="tourgrupo">Atención tsunami</td>

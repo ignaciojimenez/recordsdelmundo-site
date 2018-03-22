@@ -4,6 +4,7 @@
 <?php
 require("head1.php");
 ?>
+<meta name="robots" content="noindex" />
 </head>
 <body>
 	<div class="container">
@@ -18,7 +19,7 @@ require("head1.php");
 			require("dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 			<?php
 			require("menu1.php");
