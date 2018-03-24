@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <?php
 require("head1.php");

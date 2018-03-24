@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <?php
 require("../../head.php");
@@ -19,7 +19,7 @@ require("../../head.php");
 			require("../../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 
 			<?php
@@ -39,7 +39,7 @@ require("../../head.php");
 						<a class="iconos bandcamp" href="http://atenciontsunami.bandcamp.com"></a>
 						</td>
 					</tr>
-				</table>				
+				</table>
 				<p>
 <strong>Atención tsunami</strong> vuelven a superarse y firman con <i>Silencio en la retaguardia</i> su mejor disco (el tercero) hasta la fecha, una formidable colección de canciones que llevan aún más lejos los presupuestos del brillante <i>Que le corten la cabeza (RDM 2014)</i>.
 				</p>
@@ -60,7 +60,7 @@ partes iguales, y en el que lo musical y lo narrativo (los textos) se imbrican
 con fuerza. Algo que responde también al interés del grupo por artistas y
 producciones de diferentes épocas que se abstienen de la fidelidad a un
 concepto o fórmula y de su explotación reiterada para aventurarse y explorar
-territorios y sonidos diferentes en cada canción.	
+territorios y sonidos diferentes en cada canción.
 				</p>
 				<br>
 				<script>

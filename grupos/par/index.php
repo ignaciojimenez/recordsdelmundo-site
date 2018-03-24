@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <?php
 require("../../head.php");
@@ -20,7 +20,7 @@ require("../../head.php");
 			require("../../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 
 			<?php
@@ -35,12 +35,12 @@ require("../../head.php");
 					<tr>
 						<td class="datos"><!--<a href="#"><span>Fotos HD</span></a> · --> <a href="prensa_Paracaidas.pdf"><span>Nota de prensa</span></a> · <a href="paracaidas_Stage.jpg"><span>Rider</span></a></td>
 						<td class="social">
-							<a class="iconos facebook" href="http://www.facebook.com/paracaidasband"></a>	
+							<a class="iconos facebook" href="http://www.facebook.com/paracaidasband"></a>
 							<a class="iconos instagram" href="http://instagram.com/paracaidas_"></a>
-							<a class="iconos bandcamp" href="http://paracaidas.bandcamp.com"></a>						
+							<a class="iconos bandcamp" href="http://paracaidas.bandcamp.com"></a>
 						</td>
 					</tr>
-				</table>				
+				</table>
 				<p>
 Paracaídas son cuatro amigos con una capacidad asombrosa para simultanear
 y multiplicar sin control proyectos paralelos y perpendiculares, la mayoría
@@ -49,7 +49,7 @@ y sus esporádicos conciertos, desde febrero de 2012, eran la única manera de
 seguirles la pista. Hasta ahora. Miguel e Iñaki (Atención Tsunami, Incendios,
 Karen Koltrane), Rodrigo (Incendios, Dol, Hestiu Ròïn) y Pablo (Autumn Comets,
 Bel Bee Be, Karen Koltrane) entregan con Pensamiento de paz durante
-un ataque aéreo las pruebas de que esto de Paracaídas también va en serio.				
+un ataque aéreo las pruebas de que esto de Paracaídas también va en serio.
 				</p>
 				<br>
 				<script>

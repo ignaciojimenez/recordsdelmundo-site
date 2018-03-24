@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <?php
 require("../../head.php");
@@ -19,7 +19,7 @@ require("../../head.php");
 			require("../../dcha.php");
 			?>
 		</div>
-		
+
 		<div class="centro">
 
 			<?php
@@ -40,7 +40,7 @@ require("../../head.php");
 
 						</td>
 					</tr>
-				</table>				
+				</table>
 				<p>
 				Si en su debut, El cuerpo humano (Estoescasa 2013), Incendios ya construían con solvencia paisajes de pop emocional con una madurez y contención a prueba de vueltas, con Las sillas voladoras (RDM 2015) el grupo expande su paleta de colores para permitir que las canciones estallen en múltiples direcciones.				</p>
 				<p>

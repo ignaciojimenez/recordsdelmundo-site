@@ -21,7 +21,7 @@ function readCSV($csvFile){
 
 ?>
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 	<link href="../../style/store.css" type="text/css" rel="stylesheet" />
 <?php

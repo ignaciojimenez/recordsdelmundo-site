@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 	<script src="../scripts/moment.min.js"></script>
 	<script src="../scripts/es.js"></script>

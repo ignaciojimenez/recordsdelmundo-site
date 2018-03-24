@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 	<link href="../../style/back.css" type="text/css" rel="stylesheet" />
 	<link href="../../style/store.css" type="text/css" rel="stylesheet" />
