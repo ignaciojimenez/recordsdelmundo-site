@@ -35,11 +35,11 @@ require("../head.php");
 				otras plataformas autogestionadas para seguir haciendo, juntos, lo que les gusta.
 				</p>
 				<p id="mailp1"><span class="titulo">Contacto</span><br>
-				<script>printmail("info", "mailp1"); </script><br>
+				<a href="mailto:info@recordsdelmundo.es">info@recordsdelmundo.es</a>
 				</p>
 				<p id="mailp2"><span class="titulo">Contratación, comunicación y prensa</span><br>
 				<span class="nombre">Miguel Bellas</span><br>
-				<script>printmail("miguel", "mailp2"); </script><br>
+				<a href="mailto:miguel@recordsdelmundo.es">miguel@recordsdelmundo.es</a>
 				</p>
 				<br>
 			</div>
