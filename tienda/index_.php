@@ -22,32 +22,19 @@ require("../head.php");
 				require("../dcha.php");
 			?>
 		</div>
-
+		
 		<div class="centro">
 			<?php
 			require("../menu.php");
 			?>
 
 			<div class="contenido tienda" id="contenido">
-
-				<div class="product">
-				  <a href="producto/?producto=vltra" title="Ver VLTRA">
-					<div class="product_header">
-					  <h2>ATENCIÓN TSUNAMI - VLTRA - LP</h2>
-					  <span class="dash"></span>
-					  <h3><span class="currency_sign">€</span>15</h3>
-					</div>
-					<div class="product_thumb">
-					  <img src="../images/tienda/vltra.jpg" class="fade_in" alt="Image of VLTRA">
-					</div>
-				  </a>
-				</div>
-
+				
 				<div class="product">
 				  <a href="producto/?producto=realejo" title="Ver REALEJO">
 					<div class="product_header">
 					  <h2>AUTUMN COMETS - REALEJO - LP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>16,95</h3>
 					</div>
 					<div class="product_thumb">
@@ -55,12 +42,12 @@ require("../head.php");
 					</div>
 				  </a>
 				</div>
-
+				
 				<div class="product">
 				  <a href="producto/?producto=silencioretaguardia" title="Ver SILENCIO EN LA RETAGUARDIA">
 					<div class="product_header">
 					  <h2>ATENCIÓN TSUNAMI - SILENCIO EN LA RETAGUARDIA - LP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>14</h3>
 					</div>
 					<div class="product_thumb">
@@ -73,7 +60,7 @@ require("../head.php");
 				  <a href="producto/?producto=sillasvoladoras" title="Ver LAS SILLAS VOLADORAS">
 					<div class="product_header">
 					  <h2>INCENDIOS - LAS SILLAS VOLADORAS - LP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>14</h3>
 					</div>
 					<div class="product_thumb">
@@ -85,7 +72,7 @@ require("../head.php");
 				  <a href="producto/?producto=pensamientodepaz" title="Ver PENSAMIENTO DE PAZ DURANTE UN ATAQUE AÉREO">
 					<div class="product_header">
 					  <h2>PARACAÍDAS - PENSAMIENTO DE PAZ DURANTE UN ATAQUE AÉREO - EP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>12</h3>
 					</div>
 					<div class="product_thumb">
@@ -97,7 +84,7 @@ require("../head.php");
 				  <a href="producto/?producto=quelecortenlacabeza" title="Ver QUE LE CORTEN LA CABEZA">
 					<div class="product_header">
 					  <h2>ATENCIÓN TSUNAMI - QUE LE CORTEN LA CABEZA - LP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>14</h3>
 					</div>
 					<div class="product_thumb">
@@ -109,7 +96,7 @@ require("../head.php");
 				  <a href="producto/?producto=elcuerpohumano" title="Ver EL CUERPO HUMANO">
 					<div class="product_header">
 					  <h2>INCENDIOS - EL CUERPO HUMANO- EP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>12</h3>
 					</div>
 					<div class="product_thumb">
@@ -121,7 +108,7 @@ require("../head.php");
 				  <a href="producto/?producto=ellejanooyente" title="Ver EL LEJANO OYENTE">
 					<div class="product_header">
 					  <h2>ATENCIÓN TSUNAMI - EL LEJANO OYENTE - LP</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3>GRATIS ONLINE</h3>
 					</div>
 					<div class="product_thumb">
@@ -133,7 +120,7 @@ require("../head.php");
 				  <a href="#" title="Ver CAMSIETA">
 					<div class="product_header">
 					  <h2>CAMISETA TERRIBLEMENTE HORTERA</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>15</h3>
 					</div>
 					<div class="product_thumb">
@@ -145,7 +132,7 @@ require("../head.php");
 				  <a href="#" title="Ver QUE LE CORTEN LA CABEZA">
 					<div class="product_header">
 					  <h2>BOLSO MARCO SARASI</h2>
-					  <span class="dash"></span>
+					  <span class="dash"></span>            
 					  <h3><span class="currency_sign">€</span>15</h3>
 					</div>
 					<div class="product_thumb">
