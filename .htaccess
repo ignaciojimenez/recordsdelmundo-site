@@ -2,4 +2,6 @@
 Header always set X-XSS-Protection "1; mode=block"
 Header always set X-FRAME-OPTIONS "DENY"
 Header always set X-Content-Type-Options "nosniff"
+Header always set Content-Security-Policy-Report-Only: "default-src 'none';form-action 'self' 'unsafe-inline' www.paypal.com;connect-src 'self';frame-ancestors 'none';style-src 'self' 'sha256-MIoOa72NDinF86HFV2UD92PUGvzRRdZU2z5tJTpeCwY=' 'sha256-TH1YO7Owtg52rPfkQs+Us6yN6exn7w99CdIBBm9BmMQ=' 'sha256-8oLbXcVJjSJ90fYpSswcfipLe+MifLrU0kh+JXsU3rc=' 'sha256-5p6Ec153q5Ly5y3viWQe7yzJbPNGsNwHxk/0ZSk3dqE=' 'sha256-DJFhZYcV4yXiIHiy/xcfWbrLp6lh11OHk5FRW5fYxJA=' 'sha256-8oLbXcVJjSJ90fYpSswcfipLe+MifLrU0kh+JXsU3rc=' 'sha256-9v3Pp8M57aDtQR4p45TTk8uXGOm3f5OZCZSPc/+FHbo=';img-src 'self' www.paypal.com;script-src 'self' ajax.googleapis.com ajax.cloudflare.com 'unsafe-inline';font-src 'self';frame-src player.vimeo.com www.youtube.com bandcamp.com;object-src 'self'; report-uri https://recordsdelmundo.report-uri.com/r/d/csp/reportOnly;"
+Header always set Referrer-Policy "no-referrer-when-downgrade"
 </IfModule>
