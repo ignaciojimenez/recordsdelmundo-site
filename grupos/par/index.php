@@ -52,9 +52,9 @@ Bel Bee Be, Karen Koltrane) entregan con Pensamiento de paz durante
 un ataque aéreo las pruebas de que esto de Paracaídas también va en serio.
 				</p>
 				<br>
-				<script>
+				<!-- <script>
 				setTimeout(function(){ $("#contenido").append('<iframe src="//player.vimeo.com/video/122724051?color=ffffff&amp;byline=0&amp;portrait=0" min-width="660px" width="100%" height="405px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br><br>'); }, 200);
-				</script>
+			</script> -->
 			</div>
 		</div>
 	</div>
