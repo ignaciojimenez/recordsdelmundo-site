@@ -61,7 +61,7 @@ require("../head.php");
 					<div class="product_header">
 					  <h2>ATENCIÓN TSUNAMI - SILENCIO EN LA RETAGUARDIA - LP</h2>
 					  <span class="dash"></span>
-					  <h3><span class="currency_sign">€</span>14</h3>
+					  <h3>SOLD OUT - GRATIS ONLINE</h3>
 					</div>
 					<div class="product_thumb">
 					  <img src="../images/tienda/silencioretaguardia.jpg" class="fade_in" alt="Image of SILENCIO EN LA RETAGUARDIA">
@@ -122,7 +122,7 @@ require("../head.php");
 					<div class="product_header">
 					  <h2>ATENCIÓN TSUNAMI - EL LEJANO OYENTE - LP</h2>
 					  <span class="dash"></span>
-					  <h3>GRATIS ONLINE</h3>
+					  <h3>SOLD OUT - GRATIS ONLINE</h3>
 					</div>
 					<div class="product_thumb">
 					  <img src="../images/tienda/ellejanooyente.jpg" class="fade_in" alt="Imagen del EL LEJANO OYENTE">
