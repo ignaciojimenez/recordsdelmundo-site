@@ -79,6 +79,13 @@ require("../../head.php");
 					else if($datos[$producto]["estado"] == "preorder"){
 					}
 
+					else if($datos[$producto]["estado"] == "bandcamp"){
+						echo "<br><strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
+						echo "<br><strong>Lanzamiento:</strong>  " . htmlspecialchars($datos[$producto]["lanzamiento"]);
+						echo "<br><strong>Precio:</strong>  " . htmlspecialchars($datos[$producto]["precio"]) . " (Envío incluido)";
+						echo "<br><a href='" . htmlspecialchars($datos[$producto]["bcurl"]) ."' style='display:inline-block;' >Comprar en Bandcamp</a>";
+					}
+
 					else if($datos[$producto]["estado"] == "lanzamiento"){
 						echo "<br><strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
 						echo "<br><strong>Lanzamiento:</strong>  " . htmlspecialchars($datos[$producto]["lanzamiento"]);

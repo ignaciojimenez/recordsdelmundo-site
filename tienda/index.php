@@ -31,6 +31,19 @@ require("../head.php");
 			<div class="contenido tienda" id="contenido">
 
 				<div class="product">
+				  <a href="producto/?producto=pensamientomagico" title="Ver Pensamiento Mágico">
+					<div class="product_header">
+					  <h2>DISCIPLINA ATLÁNTICO - PENSAMIENTO MÁGICO - LP</h2>
+					  <span class="dash"></span>
+					  <h3><span class="currency_sign">€</span>18</h3>
+					</div>
+					<div class="product_thumb">
+					  <img src="../images/tienda/pensamientomagico.jpg" class="fade_in" alt="Image of Pensamiento mágico">
+					</div>
+				  </a>
+				</div>
+
+				<div class="product">
 				  <a href="producto/?producto=vltra" title="Ver VLTRA">
 					<div class="product_header">
 					  <h2>ATENCIÓN TSUNAMI - VLTRA - LP</h2>
@@ -129,6 +142,7 @@ require("../head.php");
 					</div>
 				  </a>
 				</div>
+
 				<!--<div class="product">
 				  <a href="#" title="Ver CAMSIETA">
 					<div class="product_header">

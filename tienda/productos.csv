@@ -1,10 +1,11 @@
-nombre,grupo,tipo,estado,bcalbum,img,formato,lanzamiento,precio,btnppal
-camiseta01,,camiseta,ok,,camiseta01,,,12 €,2531852
-ellejanooyente,atenciontsunami,disco,reedit,4042535803,ellejanooyente,CD,Enero 2009,10 €,2531852
-elcuerpohumano,incendios,disco,ok,3660433808,elcuerpohumano,Vinilo 12 '' + CD,Marzo 2013,10 €,3PD4B4QQ8X7CA
-quelecortenlacabeza,atenciontsunami,disco,ok,2497391259,quelecortenlacabeza,Vinilo 12 '' + CD,6 de Mayo 2014,14 €,5CFXS8QPPESMC
-pensamientodepaz,paracaidas,disco,ok,2016021601,pensamientodepaz,Vinilo 10 '' + CD,1 de Abril 2015,12 €,G4LRFCNVLKW98
-sillasvoladoras,incendios,disco,ok,2920496214,sillasvoladoras,Vinilo 12 '' + CD,28 de octubre 2015,14 €,JJYXKGU32N9TN
-silencioretaguardia,atenciontsunami,disco,reedit,1439761701,silencioretaguardia,Vinilo 12 '',4 de noviembre 2016,14 €,QNGUARE5KGYRG
-realejo,autumncomets,disco,preorder,,realejo,Vinilo 12 '',17 de noviembre 2017,16.95 €,GE5VTWK7DEN4L
-vltra,atenciotsunami,disco,ok,828241542,vltra,Vinilo 12 '',29 de marzo 2019,15 €,EUCMAKEUQU3DC
+nombre,grupo,tipo,estado,bcalbum,img,formato,lanzamiento,precio,btnppal,bcurl
+camiseta01,,camiseta,ok,,camiseta01,,,12 €,2531852,
+ellejanooyente,atenciontsunami,disco,reedit,4042535803,ellejanooyente,CD,Enero 2009,10 €,2531852,
+elcuerpohumano,incendios,disco,ok,3660433808,elcuerpohumano,Vinilo 12 '' + CD,Marzo 2013,10 €,3PD4B4QQ8X7CA,
+quelecortenlacabeza,atenciontsunami,disco,ok,2497391259,quelecortenlacabeza,Vinilo 12 '' + CD,6 de Mayo 2014,14 €,5CFXS8QPPESMC,
+pensamientodepaz,paracaidas,disco,ok,2016021601,pensamientodepaz,Vinilo 10 '' + CD,1 de Abril 2015,12 €,G4LRFCNVLKW98,
+sillasvoladoras,incendios,disco,ok,2920496214,sillasvoladoras,Vinilo 12 '' + CD,28 de octubre 2015,14 €,JJYXKGU32N9TN,
+silencioretaguardia,atenciontsunami,disco,reedit,1439761701,silencioretaguardia,Vinilo 12 '',4 de noviembre 2016,14 €,QNGUARE5KGYRG,
+realejo,autumncomets,disco,preorder,,realejo,Vinilo 12 '',17 de noviembre 2017,16.95 €,GE5VTWK7DEN4L,
+vltra,atenciotsunami,disco,ok,828241542,vltra,Vinilo 12 '',29 de marzo 2019,15 €,EUCMAKEUQU3DC,
+pensamientomagico,disciplinaatlantico,disco,bandcamp,3716877208,pensamientomagico,Vinilo 12 '',9 de marzo 2021,18 €,,"https://disciplinaatlantico.bandcamp.com/album/pensamiento-m-gico"
