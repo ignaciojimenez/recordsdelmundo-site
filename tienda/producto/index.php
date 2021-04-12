@@ -60,7 +60,7 @@ require("../../head.php");
 				if ($datos[$producto]["tipo"] == "disco"){
 					//left div
 					echo "<div class='imagenDisco' style='text-align:left;font-family:Arial; font-size:12px;'>";
-					echo "<img src='../../images/tienda/" . htmlspecialchars($datos[$producto]["img"]) . ".jpg' />";
+					echo "<img src='../../images/tienda/" . htmlspecialchars($datos[$producto]["img"]) . ".jpg' width='280'/>";
 
 					if ($datos[$producto]["estado"] == "ok"){
 						echo "<br><strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
@@ -77,6 +77,17 @@ require("../../head.php");
 					}
 
 					else if($datos[$producto]["estado"] == "preorder"){
+						echo "<br><strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
+						echo "<br><strong>Lanzamiento:</strong>  " . htmlspecialchars($datos[$producto]["lanzamiento"]);
+						echo "<br><strong>Precio:</strong>  " . htmlspecialchars($datos[$producto]["precio"]) . " (Envío incluido)";
+						echo "<br>";
+						echo "<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post' style='display:inline-block;margin-top:3px;'>";
+							echo "<input type='hidden' name='cmd' value='_s-xclick'>";
+							echo "<input type='hidden' name='hosted_button_id' value='" . htmlspecialchars($datos[$producto]["btnppal"]) . "'>";
+							echo "<input type='image' src='../../images/tienda/comprar.png' border='0' class='button' name='submit' value='Comprar' alt=''>";
+							echo "<img alt='' border='0' src='https://www.paypal.com/es_ES/i/scr/pixel.gif' width='1' height='1'>";
+						echo "</form>";
+						# echo "<a href='https://bit.ly/" . htmlspecialchars($datos[$producto]["grupo"]) . htmlspecialchars($datos[$producto]["nombre"])."' class='descarga' style='margin-top:3px;margin-left:9px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
 					}
 
 					else if($datos[$producto]["estado"] == "bandcamp"){
