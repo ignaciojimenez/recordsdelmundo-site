@@ -30,6 +30,19 @@ require("../head.php");
 
 			<div class="contenido tienda" id="contenido">
 
+			<div class="product">
+				  <a href="producto/?producto=metavolante" title="Ver Meta Volante">
+					<div class="product_header">
+					  <h2>META VOLANTE - LP</h2>
+					  <span class="dash"></span>
+					  <h3><span class="currency_sign">€</span>15</h3>
+					</div>
+					<div class="product_thumb">
+					  <img src="../images/tienda/metavolante.jpg" class="fade_in" alt="Image of Meta Volante">
+					</div>
+				  </a>
+				</div>
+
 				<div class="product">
 				  <a href="producto/?producto=pensamientomagico" title="Ver Pensamiento Mágico">
 					<div class="product_header">
