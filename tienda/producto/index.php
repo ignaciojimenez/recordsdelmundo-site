@@ -87,6 +87,8 @@ require("../../head.php");
 							echo "<input type='image' src='../../images/tienda/comprar.png' border='0' class='button' name='submit' value='Comprar' alt=''>";
 							echo "<img alt='' border='0' src='https://www.paypal.com/es_ES/i/scr/pixel.gif' width='1' height='1'>";
 						echo "</form>";
+						echo "<br>Los env&iacute;os comenzar&aacute;n en junio de 2021";
+						/*echo "<br>La semana antes del lanzamiento os haremos llegar un enlace de descarga";*/
 						# echo "<a href='https://bit.ly/" . htmlspecialchars($datos[$producto]["grupo"]) . htmlspecialchars($datos[$producto]["nombre"])."' class='descarga' style='margin-top:3px;margin-left:9px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
 					}
 
@@ -104,7 +106,7 @@ require("../../head.php");
 						echo "<br>Este disco estar&aacute; disponible próximamente.<br>Suscríbete a nuestra newsletter para estar informado";
 					}
 
-					else{
+					else if($datos[$producto]["estado"] == "reedit"){
 						echo "<br><strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
 						echo "<br><strong>Lanzamiento:</strong>  " . htmlspecialchars($datos[$producto]["lanzamiento"]);
 						echo "<br>Esta edición se ha agotado. En caso de que estés interesado en una reedición, ponte en contacto con nosotros<br>";
@@ -123,7 +125,7 @@ require("../../head.php");
 							echo '<iframe id="bc" width="300" height="390" style="position: relative; width: 300px; height: 390px;" src="https://bandcamp.com/EmbeddedPlayer/v=2/album=' . htmlspecialchars($datos[$producto]["bcalbum"]) . '/size=grande2/bgcol=FFFFFF/linkcol=333333/debug=true/" allowtransparency="true" frameborder="0"></iframe>';
 						}*/
 					}
-					else if($datos[$producto]["estado"] == "preorder"){
+					else if($datos[$producto]["estado"] == "nobandcamp"){
 						echo "<strong>Formato:</strong> " . htmlspecialchars($datos[$producto]["formato"]);
 						echo "<br><strong>Lanzamiento:</strong>  " . htmlspecialchars($datos[$producto]["lanzamiento"]);
 						echo "<br><strong>Precio:</strong>  " . htmlspecialchars($datos[$producto]["precio"]) . " (Envío incluido)";
@@ -134,9 +136,6 @@ require("../../head.php");
 							echo "<input type='image' src='../../images/tienda/comprar.png' border='0' class='button' name='submit' value='Comprar' alt=''>";
 							echo "<img alt='' border='0' src='https://www.paypal.com/es_ES/i/scr/pixel.gif' width='1' height='1'>";
 						echo "</form>";
-						/*echo "<br>Los env&iacute;os comenzar&aacute;n la segunda semana de noviembre";
-						echo "<br>La semana antes del lanzamiento os haremos llegar un enlace de descarga";*/
-						//echo "<a href='https://bit.ly/" . htmlspecialchars($datos[$producto]["grupo"]) . htmlspecialchars($datos[$producto]["nombre"])."' class='descarga' style='margin-top:3px;margin-left:9px;display:inline-block;'><img src='../../images/tienda/descargar.png' border='0'></a>";
 					}
 					else{
 						echo "<span style='font-size:36;text-align:left;'>EL DISCO SELECCIONADO<br>NO PUEDE ESCUCHARSE<br>ACTUALMENTE</span>";
