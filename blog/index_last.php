@@ -8,7 +8,7 @@
 	<link href="../style/common.css" type="text/css" rel="stylesheet" />
 	<link href="../style/back.css" type="text/css" rel="stylesheet" />
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="../scripts/moment.min.js"></script>
+	<!-- <script src="../scripts/moment.min.js"></script> /-->
 	<script src="../scripts/es.js"></script>
 	<script src="../scripts/main.js"></script>
 	<script type="text/javascript">
